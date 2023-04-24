@@ -1,7 +1,7 @@
 {
   "name": "use-mapbox-gl-js-with-react",
   "version": "0.1.0",
-  "homepage": "https://chelseybeck.github.io/mapbox-react",
+  "homepage": "https://chelseybeck.github.io/mapbox-react/public",
   "private": true,
   "dependencies": {
     "dotenv": "^16.0.3",
