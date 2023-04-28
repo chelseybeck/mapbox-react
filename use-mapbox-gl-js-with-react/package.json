@@ -3,7 +3,7 @@
     "version": "2.0.0",
     "private": true,
     "engines": {
-      "node": "14.x"
+      "node": "12.x"
     },
     "homepage": "https://311-data-v2.vercel.app/",
     "scripts": {

@@ -13,23 +13,35 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [10.x, 12.x, 14.x]
+    # strategy:
+    #   matrix:
+    #     node-version: [10.x, 12.x, 14.x]
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: Checkout Repository Code
+    - name: Checkout Repo Code
+      uses: actions/checkout@v2
+    - name: Setup node
       uses: actions/checkout@v1
-    - name: Rebuild sass
-      run: npm rebuild node-sass
+      with:
+        node-version: 12
+  
+
     - name: Install Packages
       run: npm install
+
     - name: Setup environment
       run: |
         echo REACT_APP_PRIVATE_MAPBOX_ACCESS_TOKEN=${{ secrets.PRIVATE_MAPBOX_ACCESS_TOKEN }} > .env
+
+    # - name: Use Node.js 12.x
+    #   uses: actions/setup-node@v3
+    #   with:
+    #     node-version: '12.x'
+    # - name: Checkout Repository Code
+    #   uses: actions/checkout@v1
+    # - name: Rebuild sass
+    #   run: npm rebuild node-sass
+    # - name: Install Packages
+    #   run: npm install
+    
     - name: Build project
       run: npm run build
