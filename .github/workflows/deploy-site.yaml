@@ -46,6 +46,7 @@ jobs:
     #   run: npm rebuild node-sass
     # - name: Install Packages
     #   run: npm install
-    
+    - name: Update Browser List
+      run: npx browserslist@lastest --update-db
     - name: Build project
       run: npm run build
