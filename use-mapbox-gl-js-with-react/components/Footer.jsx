@@ -74,7 +74,7 @@ const Footer = ({ lastUpdated }) => {
             </Typography>
           </div>
           <div>
-            <SocialMediaLinks classes={classes} />
+            {/* <SocialMediaLinks classes={classes} /> */}
           </div>
         </div>
       )}
