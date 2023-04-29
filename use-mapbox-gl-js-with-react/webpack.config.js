@@ -9,8 +9,9 @@ const description = 'Hack for LA’s 311-Data Team has partnered with the Los An
 module.exports = {
   entry: './index.js',
   output: {
-    path: path.join(__dirname, '/dist'),
+    // path: path.join(__dirname, '/dist'),
     filename: 'bundle.js',
+    path: '/',
   },
   watchOptions: {
     ignored: /node_modules/,
