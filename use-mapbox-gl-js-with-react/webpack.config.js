@@ -7,7 +7,7 @@ const SocialTags = require('social-tags-webpack-plugin');
 const description = 'Hack for LA’s 311-Data Team has partnered with the Los Angeles Department of Neighborhood Empowerment and LA Neighborhood Councils to create 311 data dashboards to provide all City of LA neighborhoods with actionable information at the local level.';
 
 module.exports = {
-  entry: './use-mapbox-gl-js-with-react/index.js',
+  entry: 'index.js',
   output: {
     // path: path.join(__dirname, '/dist'),
     filename: 'bundle.js',
@@ -93,9 +93,9 @@ module.exports = {
       path: './.env',
     }),
     new HtmlWebpackPlugin({
-      template: '/public/index.html',
+      template: 'public/index.html',
       title: '311-Data Neighborhood Engagement Tool',
-      favicon: '/public/favicon.png',
+      favicon: 'public/favicon.png',
       meta: {
         description,
       },
