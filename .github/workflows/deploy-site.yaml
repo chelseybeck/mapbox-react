@@ -28,8 +28,12 @@ jobs:
       with:
         node-version: '12.x'
 
-    - name: install webpack
-      run: npm install webpack
+    - name: Clear
+      run: |
+        rm -rf node_modules
+        rm -f package-lock.json
+        rm -rf dist
+        npm cache clean --force
 
     - name: Install Packages
       run: npm install
