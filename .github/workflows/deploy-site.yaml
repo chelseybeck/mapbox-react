@@ -28,10 +28,8 @@ jobs:
       with:
         node-version: '12.x'
 
-    - name: Remove node_modules and package-lock
-      run: |
-        rm -rf node_modules
-        rm -f package-lock.json  
+    - name: install webpack
+      run: npm install webpack
 
     - name: Install Packages
       run: npm install
