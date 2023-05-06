@@ -93,9 +93,9 @@ module.exports = {
       path: './.env',
     }),
     new HtmlWebpackPlugin({
-      template: './public/index.html',
+      template: '.use-mapbox-gl-js-with-react/public/index.html',
       title: '311-Data Neighborhood Engagement Tool',
-      favicon: './public/favicon.png',
+      favicon: '.use-mapbox-gl-js-with-react/public/favicon.png',
       meta: {
         description,
       },
