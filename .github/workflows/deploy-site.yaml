@@ -36,7 +36,7 @@ jobs:
       run: npm install -D webpack-cli
 
     - name: Link webpack
-      run: yes | npm link webpack
+      run: npm link webpack --yes
 
     - name: Setup environment
       run: |
