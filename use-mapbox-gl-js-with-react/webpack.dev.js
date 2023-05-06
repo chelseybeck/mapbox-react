@@ -7,7 +7,7 @@ module.exports = merge(config, {
   devtool: 'inline-source-map',
   devServer: {
     open: true,
-    contentBase: path.join(__dirname, './use-mapbox-gl-js-with-react/dist'),
+    contentBase: path.join(__dirname, '/dist'),
     publicPath: '/',
     writeToDisk: true,
     compress: true,
