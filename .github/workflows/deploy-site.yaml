@@ -27,16 +27,14 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: '12.x'
-  
+
+    - name: Remove node_modules and package-lock
+      run: |
+        rm -rf node_modules
+        rm -f package-lock.json  
 
     - name: Install Packages
       run: npm install
-
-    - name: Install Webpack CLI
-      run: npm install -D webpack-cli --yes
-
-    - name: Link webpack
-      run: npm link webpack --yes
 
     - name: Setup environment
       run: |
